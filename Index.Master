@@ -1,7 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Index.master.cs" Inherits="pandaform.Index" %>
-
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
     <title></title>

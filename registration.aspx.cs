@@ -1,5 +1,4 @@
-﻿using pandaform.API;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -12,7 +11,7 @@ using System.Xml.Linq;
 
 namespace pandaform
 {
-    public partial class Registration : System.Web.UI.Page
+    public partial class registration : System.Web.UI.Page
     {
         API.registration registrationdata = new API.registration();
         DataTable dt;

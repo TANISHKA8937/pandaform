@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="API\photo.asmx" />
     <Content Include="API\registration.asmx" />
+    <Content Include="default.aspx" />
     <Content Include="registration.aspx" />
     <Content Include="support\CSS\bootstrap.css" />
     <Content Include="support\CSS\font-awesome.css" />
@@ -87,6 +88,13 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="API\SqlHelper.cs" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Index.Master.cs">
       <DependentUpon>Index.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
