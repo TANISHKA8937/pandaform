@@ -168,13 +168,13 @@ namespace pandaform
         protected global::System.Web.UI.WebControls.TextBox pad;
 
         /// <summary>
-        /// work control.
+        /// kaam control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox work;
+        protected global::System.Web.UI.WebControls.TextBox kaam;
 
         /// <summary>
         /// ghousenum control.
@@ -355,6 +355,15 @@ namespace pandaform
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload photo;
+
+        /// <summary>
+        /// signature control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload signature;
 
         /// <summary>
         /// remark control.

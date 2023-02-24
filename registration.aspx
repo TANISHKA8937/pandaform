@@ -236,7 +236,7 @@
                             </i>
                         </div>
                     </div>
-                    <asp:TextBox ID="work" runat="server"  CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="kaam" runat="server"  CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
 
@@ -475,7 +475,7 @@
           <br /><br />
             <hr>
             <br />
-            <div class="col-md-2 mt-1 text-danger">हस्ताक्षर :</div>
+            <div class="col-md-2 mt-1 text-danger">फोटो :</div>
              <div class="col-md-4 mt-1">
                 <div class="input-group input-group-sm">
                     <div class="input-group-prepend">
@@ -485,6 +485,18 @@
                         </div>
                     </div>
  <asp:FileUpload ID="photo" runat="server" CssClass="form-control" />
+                </div>
+            </div>
+            <div class="col-md-2 mt-1 text-danger">हस्ताक्षर :</div>
+             <div class="col-md-4 mt-1">
+                <div class="input-group input-group-sm">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="	fa fa-pencil-square-o">
+                            </i>
+                        </div>
+                    </div>
+ <asp:FileUpload ID="signature" runat="server" CssClass="form-control" />
                 </div>
             </div>
             <div class="col-md-2 mt-1 text-danger">रिमार्क / अन्य जानकारी :</div>

@@ -16,11 +16,11 @@ namespace pandaform
         API.registration registrationdata = new API.registration();
         DataTable dt;
         protected void Page_Load(object sender, EventArgs e)
-
         {
             if (!IsPostBack)
             {
-               
+                date.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                dob.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 dt = registrationdata.registrationsearch("%", "%");
 
             }
@@ -29,13 +29,43 @@ namespace pandaform
         string signaturepath = "";
         protected void sameaddress_CheckedChanged(object sender, EventArgs e)
         {
-            
+            if (sameaddress.Checked == true)
+            {
+                vdesh.Text = gdesh.Text;
+                vstate.Text = gstate.Text;
+                vpincode.Text = gpincode.Text;
+                vvillagename.Text = gvillagename.Text;
+                vhousenum.Text = ghousenum.Text;
+                vtahasil.Text = gtahasil.Text;
+                vthana.Text = gthana.Text;
+                vjila.Text = gjila.Text;
+                vshahar.Text = gshahar.Text;
+
+            }
         }
         protected void submit_Click(object sender, EventArgs e)
         {
             //try
             //{
-            
-        }
-    }
+            if (photo.PostedFile.ContentLength > 1)
+            {
+                photo.SaveAs(Server.MapPath("~/photo/" + name.Text + ".jpg"));
+                photopath = "~/photo/" + name.Text + ".jpg";
+            }
+            if (signature.PostedFile.ContentLength > 1)
+            {
+                signature.SaveAs(Server.MapPath("~/signature/" + name.Text + ".jpg"));
+                signaturepath = "~/signature/" + name.Text + ".jpg";
+            }
+            registrationdata.registrationsubmit(jatiname.Text, Convert.ToInt32(vahinum.Text), vahiname.Text, Convert.ToInt32(pageno.Text), Convert.ToInt32(year.Text), name.Text, dob.Text, gender.SelectedValue, adharnum.Text, pannum.Text, pname.Text, sasurname.Text, childrenname.Text, mobilenum.Text, phonenum.Text, email.Text, pad.Text, kaam.Text, ghousenum.Text, gvillagename.Text, gtahasil.Text, gthana.Text, gjila.Text, gshahar.Text, gstate.Text, gdesh.Text, gpincode.Text, vhousenum.Text, vvillagename.Text, vtahasil.Text, vthana.Text, vjila.Text, vshahar.Text, vstate.Text, vdesh.Text, vpincode.Text, signaturepath.ToString(), photopath.ToString(), remark.Text, date.Text);
+            // Response.Write("Save Successfully !!!");
+            Response.Write("<script>alert('Data Save Successfully!!!');</script>");
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'Registration.aspx'})", true);
+            //}
+            //catch (Exception ex)
+            //{
+            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('','" + ex.Message + "', 'error')", true);
+            //}
+        }
+    }
 }
