@@ -5,15 +5,77 @@
 <html>
 <head runat="server">
     <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="support/CSS/bootstrap.css" rel="stylesheet" />
+    <link href="support/CSS/font-awesome.css" rel="stylesheet" />
+    <link href="support/CSS/dataTables.css" rel="stylesheet" />    
+    <link href="support/CSS/sweetalert.min.css" rel="stylesheet" />
+    <link href="support/CSS/Style.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
+        <div class="row p-1 m-0 bg-body-danger text-white">
+            <div class="container">
+                <div class="row">
+                   <div class="col-md-9 col-10"></div>
+                     <div class="col-md-1 col-10 ">
+                       
+                     </div>
+                    <div class="col-md-1 col-1"></div>
+                     
+
+                    <div class="col-md-1 col-1">
+                          <a href="default.aspx"><i class="fa fa-home text-white"></i></a>
+                              </div>
+            </div></div>
+
+        </div>
+<!--navbar starts-->
+        <div class="row m-0 bg-info p-0 navbarheader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-3">
+                    </div>
+                    <div class="col-md-6">
+                        <nav class="navbar navbar-expand-lg navbar-light float-right">
+                            <div class="container-fluid">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon text-white"></span>
+                                </button>
+                                <div class="navbar-collapse collapse " id="navbarColor01" style="">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item ">
+                                            <a class="nav-link active  " href="registration.aspx">पंजीकरण फार्म
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="showdata.aspx">डेटा दिखाएँ
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active " href="photo.aspx">फोटो लागाए
+                                            </a>
+                                        </li>
+                                     
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>
+    <script src="support/js/jquery-3.3.1.min.js"></script>
+<script src="support/js/bootstrap.bundle.js"></script>  <script src="support/js/bootstrap.js"></script>
+  <script src="support/js/dataTables.min.js"></script>
+  <script src="support/js/sweetalert.min.js"></script>
 </body>
 </html>
