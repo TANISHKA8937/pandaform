@@ -14,12 +14,12 @@
                  <div class="col-md-2">
      तिथि से
           <br />
-         <asp:TextBox ID="datefrom" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
+         <asp:TextBox ID="dtfrom" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
        </div>
             <div class="col-md-2">
      तिथि तक
           <br />
-         <asp:TextBox ID="dateto" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
+         <asp:TextBox ID="dtto" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
   </div>
             <div class="col-md-2">
       

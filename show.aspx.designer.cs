@@ -24,22 +24,22 @@ namespace pandaform
         protected global::System.Web.UI.WebControls.DropDownList name;
 
         /// <summary>
-        /// datefrom control.
+        /// dtfrom control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox datefrom;
+        protected global::System.Web.UI.WebControls.TextBox dtfrom;
 
         /// <summary>
-        /// dateto control.
+        /// dtto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dateto;
+        protected global::System.Web.UI.WebControls.TextBox dtto;
 
         /// <summary>
         /// search control.

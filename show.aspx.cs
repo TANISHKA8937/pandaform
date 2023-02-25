@@ -17,11 +17,16 @@ namespace pandaform
         {
             if (!IsPostBack)
             {
-                datefrom.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                dateto.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                dtfrom.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                dtto.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 dt = registrationdata.registrationsearch("%", "%");
                 grddata.DataSource = dt;
                 grddata.DataBind();
+                name.DataSource = dt.DefaultView.ToTable(true, "name");
+                name.DataTextField = "name";
+                name.DataValueField = "name";
+                name.DataBind();
+                name.Items.Insert(0, new ListItem("---Select---", "%"));
             }
         }
 
@@ -59,7 +64,7 @@ namespace pandaform
         }
         protected void search_Click(object sender, EventArgs e)
         {
-            dt = registrationdata.registrationsearch2(name.SelectedValue, datefrom.Text, dateto.Text);
+            dt = registrationdata.registrationsearch2(name.SelectedValue, dtfrom.Text, dtto.Text);
             grddata.DataSource = dt;
             grddata.DataBind();
 
