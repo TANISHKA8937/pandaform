@@ -79,6 +79,7 @@
     <Content Include="support\fonts\fontawesome-webfont.svg" />
     <Content Include="support\JS\bootstrap.bundle.js" />
     <Content Include="Web.config" />
+    <Content Include="WebService1.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\photo.asmx.cs">
@@ -125,6 +126,10 @@
     </Compile>
     <Compile Include="show.aspx.designer.cs">
       <DependentUpon>show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
