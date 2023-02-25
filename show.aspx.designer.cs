@@ -15,13 +15,13 @@ namespace pandaform
     {
 
         /// <summary>
-        /// jatiname control.
+        /// name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList jatiname;
+        protected global::System.Web.UI.WebControls.DropDownList name;
 
         /// <summary>
         /// datefrom control.

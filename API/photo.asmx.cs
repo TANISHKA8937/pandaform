@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
@@ -17,6 +18,8 @@ namespace pandaform.API
     // [System.Web.Script.Services.ScriptService]
     public class photo : System.Web.Services.WebService
     {
+        TextInfo pcase = new CultureInfo("en-US", false).TextInfo;
+
         [WebMethod]
         public void photosubmit(string signature, string picture)
         {

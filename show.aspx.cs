@@ -38,7 +38,7 @@ namespace pandaform
                 else
                 {
                     registrationdata.registrationdelete(e.CommandArgument.ToString());
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Delete Successfully !!!', 'success').then((value) => {window.location = 'showdata.aspx'})", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Delete Successfully !!!', 'success').then((value) => {window.location = 'show.aspx'})", true);
 
                 }
             }
@@ -59,7 +59,7 @@ namespace pandaform
         }
         protected void search_Click(object sender, EventArgs e)
         {
-            dt = registrationdata.registrationsearch2(jatiname.SelectedValue, datefrom.Text, dateto.Text);
+            dt = registrationdata.registrationsearch2(name.SelectedValue, datefrom.Text, dateto.Text);
             grddata.DataSource = dt;
             grddata.DataBind();
 

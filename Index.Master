@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="support/CSS/bootstrap.css" rel="stylesheet" />
     <link href="support/CSS/font-awesome.css" rel="stylesheet" />
-    <link href="support/CSS/dataTables.css" rel="stylesheet" />    
     <link href="support/CSS/sweetalert.min.css" rel="stylesheet" />
+    <link href="support/CSS/dataTables.css" rel="stylesheet" />
     <link href="support/CSS/Style.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -50,7 +50,7 @@
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link active" href="showdata.aspx">डेटा दिखाएँ
+                                            <a class="nav-link active" href="show.aspx">डेटा दिखाएँ
                                             </a>
                                         </li>
                                         <li class="nav-item">
@@ -70,10 +70,21 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-    </form>
-    <script src="support/js/jquery-3.3.1.min.js"></script>
-<script src="support/js/bootstrap.bundle.js"></script>  <script src="support/js/bootstrap.js"></script>
-  <script src="support/js/dataTables.min.js"></script>
-  <script src="support/js/sweetalert.min.js"></script>
+<script src="support/JS/jquery-3.3.1.min.js"></script>
+<script src="support/js/bootstrap.bundle.js"></script>  
+<script src="support/JS/dataTables.min.js"></script>
+<script src="support/JS/sweetalert.min.js"></script>
+</form>
+
+<script>
+        $(document).ready(function () {
+            $('#grddata').DataTable();
+            $('#grddata').prepend($("<thead></thead>").append($(this).find("tr:first"))).DataTable();
+            $('.js-example-basic-multiple').select2();
+            $('.js-example-basic-single').select2();
+            Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(BeginRequestHandler);
+            function BeginRequestHandler(sender, args) { var oControl = args.get_postBackElement(); oControl.disabled = true; oControl.value = "Wait..." }
+        });
+</script>
 </body>
 </html>

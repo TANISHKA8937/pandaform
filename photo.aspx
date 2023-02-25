@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <br /> <br />
     <div class="container rounded bg-white shadow bg-white-header">
         <div class="row">
             <div class="col-md-12 text-center pt-2 mt-1 text-danger">

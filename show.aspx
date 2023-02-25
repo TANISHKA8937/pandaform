@@ -7,9 +7,9 @@
        <div class="row m-0 p-2  border table-responsive card-body">
            <div class="row m-0 p-2">
         <div class="col-md-2">
-          जाति का नाम
+         नाम
           <br />
-           <asp:DropDownList id="jatiname" runat="server" CssClass="form-control"></asp:DropDownList>
+           <asp:DropDownList id="name" runat="server" CssClass="form-control"></asp:DropDownList>
        </div>
                  <div class="col-md-2">
      तिथि से
