@@ -33,8 +33,8 @@ namespace pandaform
             }
             if (signature.PostedFile.ContentLength > 1)
             {
-                signature.SaveAs(Server.MapPath("~/signaturepage/" + ".jpg"));
-                signaturepath = "~/signaturepage/" + ".jpg";
+                signature.SaveAs(Server.MapPath("~/signature/" + ".jpg"));
+                signaturepath = "~/signature/" + ".jpg";
                 photodata.photosubmit(signaturepath.ToString(), picturepath.ToString());
                 // Response.Write("Save Successfully !!!");
                 Response.Write("<script>alert('Data Save Successfully!!!');</script>");

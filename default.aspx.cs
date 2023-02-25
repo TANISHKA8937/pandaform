@@ -16,7 +16,7 @@ namespace pandaform
 
         protected void login_Click(object sender, EventArgs e)
         {
-			Response.Redirect("registration.aspx");
+			Response.Redirect("DashBoard.aspx");
         }
     }
 }

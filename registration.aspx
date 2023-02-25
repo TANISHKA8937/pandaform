@@ -26,6 +26,7 @@
                         </div>
                     </div>
                     <asp:TextBox ID="jatiname" runat="server" TextMode="SingleLine" CssClass="form-control"></asp:TextBox>
+                    <asp:HiddenField ID="fid" runat="server" />
                 </div>
             </div>
             <div class="col-md-2 mt-1 text-danger">वही. न. :</div>
