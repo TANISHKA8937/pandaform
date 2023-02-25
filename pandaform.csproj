@@ -72,7 +72,6 @@
     <Content Include="default.aspx" />
     <Content Include="photo.aspx" />
     <Content Include="registration.aspx" />
-    <Content Include="Report.aspx" />
     <Content Include="show.aspx" />
     <Content Include="support\CSS\bootstrap.css" />
     <Content Include="support\CSS\font-awesome.css" />
@@ -119,13 +118,6 @@
     </Compile>
     <Compile Include="registration.aspx.designer.cs">
       <DependentUpon>registration.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Report.aspx.cs">
-      <DependentUpon>Report.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Report.aspx.designer.cs">
-      <DependentUpon>Report.aspx</DependentUpon>
     </Compile>
     <Compile Include="show.aspx.cs">
       <DependentUpon>show.aspx</DependentUpon>
