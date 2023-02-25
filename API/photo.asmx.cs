@@ -23,7 +23,7 @@ namespace pandaform.API
         [WebMethod]
         public void photosubmit(string signature, string picture)
         {
-            SqlHelper.ExecuteNonQuery(CommandType.Text, "insert into photo(signature,picture) values('" + signature + "','" + picture + "','" + "')");
+            SqlHelper.ExecuteNonQuery(CommandType.Text, "insert into photo(signature,picture) values('" + signature + "','" + picture + "')");
         }
     }
 }
