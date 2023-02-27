@@ -26,10 +26,10 @@ namespace pandaform.API
                 return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from registration where sn like'" + sn + "' and JatiName like'" + jatiname + "'");
             }
         }
-        public DataTable registrationsearch2(string name, string dtfrom, string dtto)
+        public DataTable registrationsearch2(string name)
         {
             {
-                return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from registration where name like'" + name + "' and date between '" + dtfrom + "' and '" + dtto + "'");
+                return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from registration where name like'" + name + "'");
             }
         }
         [WebMethod]

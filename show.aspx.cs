@@ -64,7 +64,7 @@ namespace pandaform
         }
         protected void search_Click(object sender, EventArgs e)
         {
-            dt = registrationdata.registrationsearch2(name.SelectedValue, dtfrom.Text, dtto.Text);
+            dt = registrationdata.registrationsearch2(name.SelectedValue);
             grddata.DataSource = dt;
             grddata.DataBind();
 

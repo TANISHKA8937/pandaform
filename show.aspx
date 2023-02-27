@@ -32,7 +32,7 @@
        
 <asp:GridView ID="grddata" GridLines="None" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="grddata_PreRender" OnRowCommand="grddata_RowCommand" HeaderStyle-BackColor="#003cb3" HeaderStyle-ForeColor="white" runat="server" CssClass="table table-hover table-bordered">
 <Columns>
-    <asp:BoundField HeaderText="तिथि" DataField="date" DataFormatString="{0:dd/MM/yyyy}"/>
+    
   <asp:BoundField HeaderText="जाति का नाम" DataField="jatiname" />
 <asp:BoundField HeaderText="वही. का नाम" DataField="vahiname" />
 <asp:BoundField HeaderText="नाम" DataField="name" />
