@@ -8558,8 +8558,8 @@ textarea.form-control-lg {
 }
 
 .bg-info {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity)) !important;
+    --bs-bg-opacity: 1;
+    background-color: #b03f37 !important;
 }
 
 .bg-warning {
@@ -8573,8 +8573,8 @@ textarea.form-control-lg {
 }
 
 .bg-light {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+    --bs-bg-opacity: 1;
+    background-color: #b32f25 !important;
 }
 
 .bg-dark {

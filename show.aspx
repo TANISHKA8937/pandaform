@@ -12,14 +12,14 @@
            <asp:DropDownList id="name" runat="server" CssClass="form-control"></asp:DropDownList>
        </div>
                  <div class="col-md-2">
-     तिथि से
+     जाति से
           <br />
-         <asp:TextBox ID="dtfrom" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
+         <asp:DropDownList id="jatiname" runat="server" CssClass="form-control"></asp:DropDownList>
        </div>
             <div class="col-md-2">
-     तिथि तक
+     वही से
           <br />
-         <asp:TextBox ID="dtto" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
+        <asp:DropDownList id="vahiname" runat="server" CssClass="form-control"></asp:DropDownList>
   </div>
             <div class="col-md-2">
       
@@ -41,8 +41,10 @@
 
                     <asp:TemplateField>
                         <ItemTemplate>
-                              <asp:LinkButton ID="btnedt" runat="server" CommandName="btnedt" Text="<i class='fa fa-pencil text-sucess'></i>" CommandArgument='<%# Eval("sn") %>'></asp:LinkButton>
-                               <asp:LinkButton ID="btndlt" runat="server" OnClientClick="return confirm('Are you sure you want to delete this record?');"  CommandName="btndlt" Text="<i class='fa fa-close text-danger'></i>" CommandArgument='<%# Eval("sn") %>'></asp:LinkButton>
+                              <asp:LinkButton ID="btnedt" runat="server" CommandName="btnedt" Text="<i class='fa fa-pencil text-sucess text-decoration-none'></i>" CommandArgument='<%# Eval("sn") %>'></asp:LinkButton>
+                               <asp:LinkButton ID="btndlt" runat="server" OnClientClick="return confirm('Are you sure you want to delete this record?');"  CommandName="btndlt" Text="<i class='fa fa-close text-danger text-decoration-none'></i>" CommandArgument='<%# Eval("sn") %>'></asp:LinkButton>
+                            &nbsp; <asp:LinkButton ID="btnedt1" runat="server" CommandName="btnedt1" Text="<i class='	fa fa-edit text-success text-decoration-none'></i>" CommandArgument='<%# Eval("sn") %>'></asp:LinkButton>
+                             
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

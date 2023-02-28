@@ -26,6 +26,7 @@
                         </div>
                     </div>
                     <asp:TextBox ID="jatiname" runat="server" TextMode="SingleLine" CssClass="form-control"></asp:TextBox>
+                    <asp:HiddenField ID="sn" runat="server" />
                     <asp:HiddenField ID="fid" runat="server" />
                 </div>
             </div>
@@ -476,8 +477,8 @@
           <br /><br />
             <hr>
             <br />
-            <div class="col-md-2 mt-1 text-danger">फोटो :</div>
-             <div class="col-md-4 mt-1">
+            <div class="col-md-2 d-none mt-1 text-danger">फोटो :</div>
+             <div class="col-md-4 d-none mt-1">
                 <div class="input-group input-group-sm">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
@@ -488,8 +489,8 @@
  <asp:FileUpload ID="photo" runat="server" CssClass="form-control" />
                 </div>
             </div>
-            <div class="col-md-2 mt-1 text-danger">हस्ताक्षर :</div>
-             <div class="col-md-4 mt-1">
+            <div class="col-md-2 d-none mt-1 text-danger">हस्ताक्षर :</div>
+             <div class="col-md-4 d-none mt-1">
                 <div class="input-group input-group-sm">
                     <div class="input-group-prepend">
                         <div class="input-group-text">

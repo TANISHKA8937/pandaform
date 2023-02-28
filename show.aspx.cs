@@ -17,8 +17,7 @@ namespace pandaform
         {
             if (!IsPostBack)
             {
-                dtfrom.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                dtto.Text = DateTime.Now.ToString("yyyy-MM-dd");
+               
                 dt = registrationdata.registrationsearch("%", "%");
                 grddata.DataSource = dt;
                 grddata.DataBind();
@@ -27,6 +26,25 @@ namespace pandaform
                 name.DataValueField = "name";
                 name.DataBind();
                 name.Items.Insert(0, new ListItem("---Select---", "%"));
+                //jati name
+                dt = registrationdata.registrationsearch("%", "%");
+                grddata.DataSource = dt;
+                grddata.DataBind();
+                jatiname.DataSource = dt.DefaultView.ToTable(true, "jatiname");
+                jatiname.DataTextField = "jatiname";
+                jatiname.DataValueField = "jatiname";
+                jatiname.DataBind();
+                jatiname.Items.Insert(0, new ListItem("---Select---", "%"));
+                //vahi name
+                dt = registrationdata.registrationsearch("%", "%");
+                grddata.DataSource = dt;
+                grddata.DataBind();
+                vahiname.DataSource = dt.DefaultView.ToTable(true, "vahiname");
+                vahiname.DataTextField = "vahiname";
+                vahiname.DataValueField = "vahiname";
+                vahiname.DataBind();
+                vahiname.Items.Insert(0, new ListItem("---Select---", "%"));
+
             }
         }
 
@@ -36,8 +54,7 @@ namespace pandaform
             {
                 if (e.CommandName == "btnedt")
                 {
-                    dt = registrationdata.registrationsearch(e.CommandArgument.ToString(), "%");
-
+                    Response.Redirect("registration.aspx?Keys="+e.CommandArgument.ToString());
                 }
 
                 else
@@ -64,7 +81,7 @@ namespace pandaform
         }
         protected void search_Click(object sender, EventArgs e)
         {
-            dt = registrationdata.registrationsearch2(name.SelectedValue);
+            dt = registrationdata.registrationsearch2(name.SelectedValue,jatiname.SelectedValue,vahiname.SelectedValue);
             grddata.DataSource = dt;
             grddata.DataBind();
 
