@@ -26,7 +26,7 @@
                      
 
                     <div class="col-md-1 col-1">
-                          <a href="default.aspx"><i class="fa fa-home text-white text-decoration-none"></i></a>
+                          <a href="default.aspx"><i class="fa fa-home fa-2x text-white text-decoration-none"></i></a>
                               </div>
             </div></div>
 
@@ -46,17 +46,14 @@
                                 <div class="navbar-collapse collapse " id="navbarColor01" style="">
                                     <ul class="navbar-nav">
                                         <li class="nav-item ">
-                                            <a class="nav-link active  p-3" href="registration.aspx?Keys=new">पंजीकरण फार्म
+                                            <a class="nav-link active  p-3" href="registration.aspx?Keys=new"><b>पंजीकरण फार्म</b>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link active p-3" href="show.aspx">डेटा दिखाएँ
+                                            <a class="nav-link active p-3" href="show.aspx"><b>डेटा दिखाएँ</b>
                                             </a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link active p-3 " href="photo.aspx">फोटो लागाए
-                                            </a>
-                                        </li>
+                                        
                                      
                                     </ul>
                                 </div>

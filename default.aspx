@@ -23,17 +23,32 @@
 }
 
 body {
-    background:#fbbdbd99;
+    height:1000px;
+    width: 1963px;
+    background-image:url('support/login background panda.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    
+    
+}
+.logo {
+    width: 100px;
+    margin: auto;
 }
 
+.logo img {
+    width: 100px;
+    height: 100px;
+    object-fit:cover;
+}
 .wrapper {
-    max-width: 350px;
-    min-height: 350px;
+    max-width: 400px;
+    min-height: 400px;
     margin: 80px auto;
     padding: 40px 30px 30px 30px;
     background-color: #ecf0f3;
     border-radius: 15px;
-    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+    
 }
 
 
@@ -106,9 +121,14 @@ body {
     </style>
 </head>
 <body >
+    
     <form id="form2" runat="server">
        <div class="wrapper">
-      
+          
+      <div class="logo">
+            <img src="../support/logopanda.jpg" alt=""/>
+        </div>
+      <br />
         <div class="text-center mt-4 h1 name">
             
             LogIn
@@ -126,6 +146,7 @@ body {
         </center>
        
     </div>
+        
     </form>
 
     <script src="support/JS/bootstrap.bundle.js"></script>

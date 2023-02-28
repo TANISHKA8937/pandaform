@@ -24,6 +24,15 @@ namespace pandaform
         protected global::System.Web.UI.WebControls.FileUpload signature;
 
         /// <summary>
+        /// isign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image isign;
+
+        /// <summary>
         /// picture control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace pandaform
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload picture;
+
+        /// <summary>
+        /// iphoto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image iphoto;
 
         /// <summary>
         /// reset control.

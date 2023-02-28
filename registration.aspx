@@ -526,6 +526,7 @@
             <div class="col-md-3 mt-1 text-center">
                   
                 <asp:Button ID="submit" Text="Submit" runat="server" CssClass="btn w-100 p-1 rounded-2 bg-warning" OnClick="submit_Click" />
+                 <asp:Button ID="addfamily" Text="Submit" Visible="false" runat="server" CssClass="btn w-100 p-1 rounded-2 bg-warning" OnClick="addfamily_Click" />
             </div>
 
         </div>

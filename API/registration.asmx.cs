@@ -54,12 +54,27 @@ namespace pandaform.API
         [WebMethod]
         public void registrationupdate(string sn,string familyid, string jatiname, string vahinum, string vahiname, string pageno, string year, string name, string dob, string gender, string adharnum, string pannum, string pname, string sasurname, string childrenname, string mobilenum, string phonenum, string email, string pad, string kaam, string ghousenum, string gvillagename, string gtahasil, string gthana, string gjila, string gshahar, string gstate, string gdesh, string gpincode, string vhousenum, string vvillagename, string vtahasil, string vthana, string vjila, string vshahar, string vstate, string vdesh, string vpincode, string photo, string signature, string remark)
         {
-            SqlHelper.ExecuteNonQuery(CommandType.Text, "update registration set jatiname=N'" + jatiname + "',vahinum=N'" + vahinum + "'vahiname=N'" + vahiname + "',pageno=N'" + pageno + "'year=N'" + year +"',name=N'" + name + "'dob='" + dob +"'gender=N'" + gender + "'adharnum=N'" + adharnum + "'pannum=N'" + pannum + "'pname=N'" +pname+ "'sasurname=N'" + sasurname + "'childrenname=N'" + childrenname + "'mobilenum=N'" + mobilenum + "'phonenum=N'" +phonenum+ "'email=N'" + email + "'pad=N'" + pad + "'kaam=N'" + kaam + "'ghousenum=N'" + ghousenum + "'gvillagename=N'" + gvillagename+ "'gtahasil=N'" + gtahasil + "'gthana=N'" + gthana + "'gjila=N'" +gjila+ "'gshahar=N'" +gshahar+ "'gstate=N'" +gstate+"'gdesh=N'" + gdesh+ "'gpincode=N'" +gpincode+"'vhousenum=N'" +vhousenum+ "'vvillagename=N'" +vvillagename+ "'vtahasil=N'" +vtahasil+ "'vthana=N'" +vthana+"'vjila=N'" +vjila+ "'vshahar=N'" +vshahar+ "'vstate=N'" +vstate+ "'vdesh=N'" +vdesh+ "'vpincode=N'" +vpincode+ "'remark=N'" +remark + "'where sn='" + sn + "'");
+            SqlHelper.ExecuteNonQuery(CommandType.Text, "update registration set jatiname=N'" + jatiname + "',vahinum=N'" + vahinum + "',vahiname=N'" + vahiname + "',pageno=N'" + pageno + "',year=N'" + year +"',name=N'" + name + "',dob='" + dob +"',gender=N'" + gender + "',adharnum=N'" + adharnum + "',pannum=N'" + pannum + "',pname=N'" +pname+ "',sasurname=N'" + sasurname + "',childrenname=N'" + childrenname + "',mobilenum=N'" + mobilenum + "',phonenum=N'" +phonenum+ "',email=N'" + email + "',pad=N'" + pad + "',kaam=N'" + kaam + "',ghousenum=N'" + ghousenum + "',gvillagename=N'" + gvillagename+ "',gtahasil=N'" + gtahasil + "',gthana=N'" + gthana + "',gjila=N'" +gjila+ "',gshahar=N'" +gshahar+ "',gstate=N'" +gstate+"',gdesh=N'" + gdesh+ "',gpincode=N'" +gpincode+"',vhousenum=N'" +vhousenum+ "',vvillagename=N'" +vvillagename+ "',vtahasil=N'" +vtahasil+ "',vthana=N'" +vthana+"',vjila=N'" +vjila+ "',vshahar=N'" +vshahar+ "',vstate=N'" +vstate+ "',vdesh=N'" +vdesh+ "',vpincode=N'" +vpincode+ "',remark=N'" +remark + "'where sn='" + sn + "'");
         }
         [WebMethod]
         public void registrationdelete(string sn)
         {
             SqlHelper.ExecuteNonQuery(CommandType.Text, "delete from registration where sn='" + sn + "'");
+        }
+        [WebMethod]
+        public void photosubmit(string signature, string picture)
+        {
+            SqlHelper.ExecuteNonQuery(CommandType.Text, "update registration set photo='" + picture + "',signature='" + signature + "'");
+        }
+        [WebMethod]
+        public DataTable photosearch(string sn)
+        {
+            return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select photo,signature from registration where sn='" + sn + "'");
+        }
+        [WebMethod]
+        public DataTable familydata(string familyid)
+        {
+            return SqlHelper.ExecuteTextDataTable(CommandType.Text, "select * from registration where familyid='" + familyid+ "'");
         }
     }
 }

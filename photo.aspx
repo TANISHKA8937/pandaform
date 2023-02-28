@@ -18,10 +18,14 @@
                      <div class="col-md-2 mt-1 text-danger">हस्ताक्षर :</div>
              <div class="col-md-4 mt-1">
                <asp:FileUpload ID="signature" runat="server" CssClass="form-control" />
+                 <br />
+                 <asp:Image ID="isign" runat="server" Height="150px" />
                 </div>
                  <div class="col-md-2 mt-1 text-danger">फोटो :</div>
              <div class="col-md-4 mt-1">
                     <asp:FileUpload ID="picture" runat="server" CssClass="form-control" />
+                 <br />
+                 <asp:Image ID="iphoto" runat="server" Height="150px" />
                 </div>
  <br /> <br /><br /> <br />
                  <div class="col-md-3"></div>

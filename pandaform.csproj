@@ -67,10 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="API\photo.asmx" />
     <Content Include="API\registration.asmx" />
     <Content Include="DashBoard.aspx" />
     <Content Include="default.aspx" />
+    <Content Include="Family.aspx" />
     <Content Include="photo.aspx" />
     <Content Include="registration.aspx" />
     <Content Include="show.aspx" />
@@ -84,14 +84,12 @@
     <Content Include="support\JS\dataTables.min.js" />
     <Content Include="support\JS\jquery-3.3.1.min.js" />
     <Content Include="support\JS\sweetalert.min.js" />
+    <Content Include="support\login background panda.jpg" />
+    <Content Include="support\logopanda.jpg" />
     <Content Include="support\mandir.jpeg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API\photo.asmx.cs">
-      <DependentUpon>photo.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="API\registration.asmx.cs">
       <DependentUpon>registration.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -110,6 +108,13 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Family.aspx.cs">
+      <DependentUpon>Family.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Family.aspx.designer.cs">
+      <DependentUpon>Family.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.Master.cs">
       <DependentUpon>Index.Master</DependentUpon>

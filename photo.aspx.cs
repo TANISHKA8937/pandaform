@@ -10,16 +10,27 @@ namespace pandaform
 {
     public partial class photo : System.Web.UI.Page
     {
-        API.photo photodata = new API.photo();
+        API.registration photodata = new API.registration();
         DataTable dt;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            try
             {
-                
+                if (!IsPostBack)
+                {                  
+                    dt = photodata.photosearch(Request.QueryString["Keys"].ToString());
+                    if (dt.Rows.Count > 0)
+                    {
+                        isign.ImageUrl = dt.Rows[0]["signature"].ToString();
+                        iphoto.ImageUrl = dt.Rows[0]["photo"].ToString();
+                    }
+                }
             }
-
+            catch(Exception ex)
+            {
+                Response.Redirect("registration.aspx");
+            }
         }
         string picturepath = "";
         string signaturepath = "";
@@ -38,7 +49,7 @@ namespace pandaform
                 photodata.photosubmit(signaturepath.ToString(), picturepath.ToString());
                 // Response.Write("Save Successfully !!!");
                 Response.Write("<script>alert('Data Save Successfully!!!');</script>");
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'photo.aspx'})", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Save Successfully !!!', 'success').then((value) => {window.location = 'show.aspx'})", true);
             }
 
         }

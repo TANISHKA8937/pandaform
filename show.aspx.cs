@@ -54,14 +54,25 @@ namespace pandaform
             {
                 if (e.CommandName == "btnedt")
                 {
-                    Response.Redirect("registration.aspx?Keys="+e.CommandArgument.ToString());
+                    Response.Redirect("registration.aspx?Keys=" + e.CommandArgument.ToString());
                 }
-
+                else if (e.CommandName == "btnfamily")
+                {
+                    Session["fid"] = e.CommandArgument.ToString();
+                    Response.Redirect("registration.aspx?Keys=family");
+                }
+                else if(e.CommandName== "btnphoto")
+                {
+                    Response.Redirect("Photo.aspx?Keys=" + e.CommandArgument.ToString());
+                }
+                else if (e.CommandName == "btnfamilydata")
+                {
+                    Response.Redirect("Family.aspx?Keys=" + e.CommandArgument.ToString());
+                }
                 else
                 {
                     registrationdata.registrationdelete(e.CommandArgument.ToString());
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "swal('', 'Data Delete Successfully !!!', 'success').then((value) => {window.location = 'show.aspx'})", true);
-
                 }
             }
             catch (Exception ex)

@@ -32,7 +32,11 @@
        
 <asp:GridView ID="grddata" GridLines="None" AutoGenerateColumns="false" ClientIDMode="Static" OnPreRender="grddata_PreRender" OnRowCommand="grddata_RowCommand" HeaderStyle-BackColor="#003cb3" HeaderStyle-ForeColor="white" runat="server" CssClass="table table-hover table-bordered">
 <Columns>
-    
+    <asp:TemplateField>
+    <ItemTemplate>
+        <%# Container.DataItemIndex + 1 %>
+    </ItemTemplate>
+</asp:TemplateField>
   <asp:BoundField HeaderText="जाति का नाम" DataField="jatiname" />
 <asp:BoundField HeaderText="वही. का नाम" DataField="vahiname" />
 <asp:BoundField HeaderText="नाम" DataField="name" />
@@ -43,7 +47,9 @@
                         <ItemTemplate>
                               <asp:LinkButton ID="btnedt" runat="server" CommandName="btnedt" Text="<i class='fa fa-pencil text-sucess text-decoration-none'></i>" CommandArgument='<%# Eval("sn") %>'></asp:LinkButton>
                                <asp:LinkButton ID="btndlt" runat="server" OnClientClick="return confirm('Are you sure you want to delete this record?');"  CommandName="btndlt" Text="<i class='fa fa-close text-danger text-decoration-none'></i>" CommandArgument='<%# Eval("sn") %>'></asp:LinkButton>
-                            &nbsp; <asp:LinkButton ID="btnedt1" runat="server" CommandName="btnedt1" Text="<i class='	fa fa-edit text-success text-decoration-none'></i>" CommandArgument='<%# Eval("sn") %>'></asp:LinkButton>
+                            <asp:LinkButton ID="btnphoto" runat="server" CommandName="btnphoto" Text="<i class='fa fa-edit text-success text-decoration-none'></i>" CssClass="pl-1" CommandArgument='<%# Eval("sn") %>'></asp:LinkButton>
+                             <asp:LinkButton ID="btnfamiltdata" runat="server" CommandName="btnfamilydata" Text="<i class='	fa fa-group text-success text-decoration-none'></i>" CssClass="pl-1" CommandArgument='<%# Eval("familyid") %>'></asp:LinkButton>
+                            <asp:LinkButton ID="btnfamily" runat="server" CommandName="btnfamily" Text="<i class='	fa fa-plus text-warning text-decoration-none'></i>" CssClass="pl-1" CommandArgument='<%# Eval("familyid") %>'></asp:LinkButton>
                              
                         </ItemTemplate>
                     </asp:TemplateField>
