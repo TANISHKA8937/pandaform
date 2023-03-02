@@ -2,6 +2,7 @@
 body {
     font-family: 'Poppins', sans-serif !important;
 }
+
 .bg-body-danger {
     color: #b32f25 !important;
 }
@@ -31,4 +32,13 @@ body {
 .ad:hover
 {
     background-color:lightgoldenrodyellow;
+}
+.image {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    /* Full height */
+    height: 100vh !important;
+    width:100% !important;
+    /* Center and scale the image nicely */
+    background-position: center !important;
 }

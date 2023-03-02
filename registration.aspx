@@ -5,11 +5,9 @@
 <div class="container rounded bg-white shadow bg-white-header">
         <div class="row">
             <div class="col-md-12 text-center pt-2 mt-1 text-danger">
-                <h4>
+                <h4><b>
                पंजीकरण फार्म
-                    </h4>
-               
-                <h6>(अपना विवरण भरने के लिए केवल अंग्रेजी (A-Z) का ही उपयोग करे )</h6>
+                    </b></h4>    
             </div>
             </div>
         <hr>
@@ -142,7 +140,7 @@
                             </i>
                         </div>
                     </div>
-                    <asp:TextBox ID="pannum" runat="server"  MaxLength="15"  CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="pannum" runat="server"  CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
               <div class="col-md-2 mt-1 text-danger">पिता /पति का नाम :</div>
@@ -190,7 +188,7 @@
                             </i>
                         </div>
                     </div>
-                    <asp:TextBox ID="mobilenum" runat="server" pattern="[6-9]{1}[0-9]{9}" MaxLength="10" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="mobilenum" runat="server"  MaxLength="10" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
              <div class="col-md-2 mt-1 text-danger">फ़ोन न. :</div>
@@ -202,7 +200,7 @@
                             </i>
                         </div>
                     </div>
- <asp:TextBox ID="phonenum" runat="server" pattern="[6-9]{1}[0-9]{9}"  MaxLength="10"  CssClass="form-control"></asp:TextBox>
+ <asp:TextBox ID="phonenum" runat="server" MaxLength="10" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
              <div class="col-md-2 mt-1 text-danger">ईमेल आईडी :</div>
@@ -306,7 +304,7 @@
                             </i>
                         </div>
                     </div>
-                    <asp:TextBox ID="gjila" runat="server"  MaxLength="15"  CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="gjila" runat="server"  CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
 <div class="col-md-2 mt-1 text-danger">शहर :</div>
@@ -318,7 +316,7 @@
                             </i>
                         </div>
                     </div>
-                    <asp:TextBox ID="gshahar" runat="server"  MaxLength="15" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="gshahar" runat="server"  CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
              <div class="col-md-2 mt-1 text-danger">राज्य :</div>
@@ -330,7 +328,7 @@
                             </i>
                         </div>
                     </div>
-  <asp:TextBox ID="gstate" runat="server"  MaxLength="15" CssClass="form-control"></asp:TextBox>
+  <asp:TextBox ID="gstate" runat="server"  CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
              <div class="col-md-2 mt-1 text-danger">देश :</div>
@@ -521,11 +519,11 @@
             <br />
             <div class="col-md-3"></div>
  <div class="col-md-3 mt-1 text-center">
-             <asp:Button ID="reset" Text="Reset" runat="server" CssClass="btn w-100 p-1 rounded-2 bg-warning"  OnClientClick="this.form.reset();return false;" CausesValidation="false"    />
+             <asp:Button ID="reset" Text="Reset" runat="server" CssClass="btn w-100 p-1 rounded-2 bg-danger text-white"  OnClientClick="this.form.reset();return false;" CausesValidation="false"    />
                    </div>
             <div class="col-md-3 mt-1 text-center">
                   
-                <asp:Button ID="submit" Text="Submit" runat="server" CssClass="btn w-100 p-1 rounded-2 bg-warning" OnClick="submit_Click" />
+                <asp:Button ID="submit" Text="Submit" runat="server" CssClass="btn w-100 p-1 rounded-2 bg-danger text-white" OnClick="submit_Click" />
                  <asp:Button ID="addfamily" Text="Submit" Visible="false" runat="server" CssClass="btn w-100 p-1 rounded-2 bg-warning" OnClick="addfamily_Click" />
             </div>
 

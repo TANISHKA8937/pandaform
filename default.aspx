@@ -4,8 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="support/CSS/bootstrap.css" rel="stylesheet" />
 <link href="support/CSS/font-awesome.css" rel="stylesheet" />
 <link href="support/CSS/Style.css" rel="stylesheet" />
@@ -23,12 +23,15 @@
 }
 
 body {
-    height:1000px;
-    width: 1963px;
+    
     background-image:url('support/login background panda.jpg');
     background-size:cover;
     background-repeat: no-repeat;
-    
+     /* Full height */
+  height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
     
 }
 .logo {
