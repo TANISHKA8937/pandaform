@@ -142,7 +142,7 @@
                             </i>
                         </div>
                     </div>
-                    <asp:TextBox ID="pannum" runat="server"  CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="pannum" runat="server"  MaxLength="15"  CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
               <div class="col-md-2 mt-1 text-danger">पिता /पति का नाम :</div>
@@ -190,7 +190,7 @@
                             </i>
                         </div>
                     </div>
-                    <asp:TextBox ID="mobilenum" runat="server"  MaxLength="10" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="mobilenum" runat="server" pattern="[6-9]{1}[0-9]{9}" MaxLength="10" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
              <div class="col-md-2 mt-1 text-danger">फ़ोन न. :</div>
@@ -202,7 +202,7 @@
                             </i>
                         </div>
                     </div>
- <asp:TextBox ID="phonenum" runat="server" MaxLength="10" CssClass="form-control"></asp:TextBox>
+ <asp:TextBox ID="phonenum" runat="server" pattern="[6-9]{1}[0-9]{9}"  MaxLength="10"  CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
              <div class="col-md-2 mt-1 text-danger">ईमेल आईडी :</div>
@@ -306,7 +306,7 @@
                             </i>
                         </div>
                     </div>
-                    <asp:TextBox ID="gjila" runat="server"  CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="gjila" runat="server"  MaxLength="15"  CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
 <div class="col-md-2 mt-1 text-danger">शहर :</div>
@@ -318,7 +318,7 @@
                             </i>
                         </div>
                     </div>
-                    <asp:TextBox ID="gshahar" runat="server"  CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="gshahar" runat="server"  MaxLength="15" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
              <div class="col-md-2 mt-1 text-danger">राज्य :</div>
@@ -330,7 +330,7 @@
                             </i>
                         </div>
                     </div>
-  <asp:TextBox ID="gstate" runat="server"  CssClass="form-control"></asp:TextBox>
+  <asp:TextBox ID="gstate" runat="server"  MaxLength="15" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
              <div class="col-md-2 mt-1 text-danger">देश :</div>
